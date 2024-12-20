@@ -35,9 +35,9 @@ Una de las primeras tareas en el análisis exploratorio de datos es entender y a
 
 En un conjunto de datos, las características se pueden clasificar en distintos tipos, cada uno de los cuales requiere diferentes tratamientos y análisis. Estos tipos de datos incluyen por ejemplo:
 
-- **Datos numéricos**: Representan cantidades numéricas y se dividen en dos subtipos: **discretos** y **continuos**. Los datos numéricos discretos toman valores enteros (por ejemplo, el número de habitaciones de una casa), mientras que los datos continuos pueden tomar cualquier valor en un rango, como el precio de una vivienda o la temperatura. Los datos numéricos incorporan relaciones matemáticas entre ellos, ya sean de tipo aritmético de cardinalidad.
+- **Datos numéricos**: Representan cantidades numéricas y se dividen en dos subtipos: **discretos** y **continuos**. Los datos numéricos discretos toman valores enteros (por ejemplo, el número de habitaciones de una casa), mientras que los datos continuos pueden tomar cualquier valor en un rango, como el precio de una vivienda o la temperatura. Los datos numéricos incorporan relaciones matemáticas entre ellos, ya sean de tipo aritmético o de cardinalidad.
   
-- **Datos categóricos**: Representan categorías o etiquetas, como el color de un coche o el tipo de vivienda (apartamento, casa unifamiliar, etc.). A menudo es necesario convertir estos datos en una representación numérica, por ejemplo, mediante **one-hot encoding**, para que puedan ser utilizados por algoritmos de machine learning. Aunque un **dato categórico** puede tener en origen forma numérica, su **significado** no es cuantitativo. Quiere decir que los valores numéricos de los datos categóricos no implican una relación matemática entre ellos y sólo pueden entenderse como *etiquetas*
+- **Datos categóricos**: Representan categorías o etiquetas, como el color de un coche o el tipo de vivienda (apartamento, casa unifamiliar, etc.). A menudo es necesario convertir estos datos en una representación numérica, por ejemplo, mediante **one-hot encoding**, para que puedan ser utilizados por algoritmos de machine learning. Aunque un **dato categórico** puede tener en origen forma numérica, su **significado** no es cuantitativo. Quiere decir que los valores numéricos de los datos categóricos no implican una relación matemática entre ellos y sólo pueden entenderse como *etiquetas*.
 
 - **Datos ordinales**: Tipo especial de datos categóricos donde existe un orden inherente entre las categorías, pero las diferencias entre ellas no tienen un significado cuantitativo preciso. Un ejemplo clásico es el nivel de educación (primaria, secundaria, universitaria).
 
@@ -67,9 +67,10 @@ El **resumen estadístico** es uno de los primeros pasos al analizar un conjunto
 
 #### Medidas de tendencia central
 
-Las **medidas de tendencia central** indican el valor típico o promedio de una variable. Entre las más comunes se encuentran la **media** o la **mediana**
+Las **medidas de tendencia central** indican el valor típico o promedio de una variable. Entre las más comunes se encuentran la **media** o la **mediana**.
 
 La **media** es el promedio de los valores de una variable y se calcula sumando todos los valores y dividiéndolos por el número de observaciones. Su fórmula es:
+
 $$
 \mu = \frac{1}{n} \sum_{i=1}^{n} x_i
 $$
@@ -93,6 +94,7 @@ La **mediana**, a diferencia de la media, es el valor que se encuentra en el cen
 Las **medidas de dispersión** cuantifican cómo se distribuyen los valores de una variable en torno a la media, proporcionando información sobre la variabilidad o la consistencia de los datos.
 
 La **varianza** mide la dispersión de los datos respecto a la media y se calcula como el promedio de los cuadrados de las diferencias entre cada valor y la media. Su fórmula es:
+
 $$
 \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2
 $$
@@ -100,6 +102,7 @@ $$
 Donde $\mu$ es la media de los valores y $x_i$ son los valores individuales.
 
 Por su parte, la **desviación estándar** es simplemente la raíz cuadrada de la varianza y es una medida más intuitiva de la dispersión, ya que se expresa en las mismas unidades que los datos originales:
+
 $$
 \sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \mu)^2}
 $$
@@ -155,8 +158,6 @@ Al analizar un conjunto de datos, es esencial comprender cómo se distribuyen lo
 ##### ¿Qué es una distribución estadística?
 
 Una **distribución estadística** es una función que describe todos los posibles valores que una variable puede tomar y la frecuencia o probabilidad de que cada valor ocurra. Las distribuciones pueden ser clasificadas en varios tipos según su forma. Por ejemplo, las más comunes son del tipo **normal**, **sesgada**, **bimodal** o **uniforme**. Algunas distribuciones se describen mediante parámetros como la **media** (que indica la tendencia central) y la **varianza** (que mide la dispersión).
-
-> **Ejemplo**: La **distribución normal** es simétrica y tiene forma de campana, con la mayoría de los datos agrupados en torno a la media. Esta es una de las distribuciones más comunes en estadística y se asume en muchos modelos de machine learning, debido a su propiedad de que la media, mediana y moda coinciden.
 
 ##### Visualización y análisis de la distribución
 
